@@ -1,0 +1,2 @@
+En bash el operador == si la variable de la derecha no está entre comillas pueden usarse wildcards y bruteforcear la variable de la izquierda:
+$var1 == $var2 Si $var1 es hola si la $var2 le asignamos el valor asterisco (*) cumplirá la igualdad porque no está entrecomillada la de la derecha.
