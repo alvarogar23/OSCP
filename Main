@@ -5,3 +5,7 @@ PASAR AL OBSIDIAN.
 
 SIEMPRE HAY QUE FIJARSE EN LAS RUTAS ABSOLUTAS Y RELATIVAS DE LOS SCRIPTS QUE SE EJECUEN YA SEA DE FORMA MANUAL O POR AUTOMATIZACIONES YA QUE PODEMOS LLEGAR A MANIPULARLOS O SUSTITUIRLOS.
 REVISAR SI HAY DIRECTORIOS .git
+
+Si falla el virtual hosting con gobuster podemos utilizar el siguiente comando de Wfuzz:
+
+wfuzz -u http://pandora.htb -H "Host: FUZZ.pandora.htb" -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt
