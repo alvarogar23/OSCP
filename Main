@@ -16,4 +16,6 @@ gpp -d -o <fichero_final> <ficher_gpg> # Desencriptar fichero gpg
 
 ssh -L <PUERTO_LOCAL>:localhost:<PUERTO_REMOTO> user@server
 
+en AD querydispinfo puede dar también bastante información por los comentarios
+
 
