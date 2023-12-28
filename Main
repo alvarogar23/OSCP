@@ -18,4 +18,10 @@ ssh -L <PUERTO_LOCAL>:localhost:<PUERTO_REMOTO> user@server
 
 en AD querydispinfo puede dar también bastante información por los comentarios
 
+### PASSWORD SPRAYING ###
+
+crackmapexec smb <IP> -u <USUARIO/LISTA> -p <CONTRASEÑA>
+
+SIEMPRE HACER EN WINDOWS SI NO SE ENCUENTRA NADA --> ls -force para poder ver archivos ocultos
+
 
