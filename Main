@@ -83,3 +83,8 @@ R4v3nBe5tD3veloP3r\!123
 ### Revertir contraseña VNC ###
 
 echo -n <CONTRASEÑA HEXADECIMAL> | xxd -r -p | openssl enc -des-cbc --nopad --nosalt -K e84ad660c4721ae0 -iv 0000000000000000 -d | hexdump -Cv
+
+
+### PATH TRAVERSAL/LFI ###
+
+Puede darse el caso que tenga que haber un nombre de archivo obligatorio, en el caso de que podamos crear un archivo si le ponemos ese nombre seguido de lo que nos interesa se puede liar
