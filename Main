@@ -88,3 +88,7 @@ echo -n <CONTRASEÑA HEXADECIMAL> | xxd -r -p | openssl enc -des-cbc --nopad --n
 ### PATH TRAVERSAL/LFI ###
 
 Puede darse el caso que tenga que haber un nombre de archivo obligatorio, en el caso de que podamos crear un archivo si le ponemos ese nombre seguido de lo que nos interesa se puede liar
+
+### NMAP DOPADO PARA TUNNELING ###
+
+seq 1 65535 | xargs -P 500 -I {} proxychains nmap -sT -Pn -p{} -open -T5 -v -n 172.17.0.1 2>&1 | grep "tcp open"
