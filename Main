@@ -114,3 +114,10 @@ curl -X POST -H "Content-Type: multipart/form-data" http://192.168.161.249:33414
 Podemos lanzar el proceso que este compilado con la anterior línea y crasharlo con Ctrl + \ y encontrado información útil en la ruta /var/lib/apport/coredumo
 
 También se puede crashaer mandadndolo a un segundo plano y matando parte del proceso con kill -BUS <PID> y consultado en fichero generado en /var/crash
+
+Siempre mirar si hay mail en el sistema:
+
+ /var/spool/exim4/
+ /var/log/exim4/ ( can try our luck if any email content in log)
+ /var/mail/
+ /var/spool/mail/
