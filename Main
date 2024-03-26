@@ -155,3 +155,11 @@ Para el RCE VISITAR TANTO:
 https://book.hacktricks.xyz/pentesting-web/sql-injection/postgresql-injection/rce-with-postgresql-extensions
 
 https://github.com/squid22/PostgreSQL_RCE/blob/main/postgresql_rce.py
+
+### MYSQL 4.X-5.X EXPLOIT ###
+
+https://www.exploit-db.com/exploits/1518
+
+https://emarcel.com/mysql-error-when-creating-function/ (EN CASO DE QUE DE EL ERROR DE FILE TOO SHORT)
+
+https://juggernaut-sec.com/mysql-user-defined-functions/
