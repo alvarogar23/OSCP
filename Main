@@ -139,3 +139,9 @@ https://github.com/Ridter/redis-rce
 ### Password reuse ###
 
 Siempre para loggearnos como un usuario probar si su contraseña es su mismo nombre de usuario, por ejemplo patrick:patrick
+
+### FAIL2BAN ###
+
+https://systemweakness.com/privilege-escalation-with-fail2ban-nopasswd-d3a6ee69db49 (ESTA MEJOR)
+
+https://juggernaut-sec.com/fail2ban-lpe/
