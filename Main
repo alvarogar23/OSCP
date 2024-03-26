@@ -135,3 +135,7 @@ https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
 ### REDIS RCE ###
 
 https://github.com/Ridter/redis-rce
+
+### Password reuse ###
+
+Siempre para loggearnos como un usuario probar si su contraseña es su mismo nombre de usuario, por ejemplo patrick:patrick
