@@ -145,3 +145,13 @@ Siempre para loggearnos como un usuario probar si su contraseña es su mismo nom
 https://systemweakness.com/privilege-escalation-with-fail2ban-nopasswd-d3a6ee69db49 (ESTA MEJOR)
 
 https://juggernaut-sec.com/fail2ban-lpe/
+
+### POSTGRESQL ###
+
+DEFAULT CREDENTIALS = postgres:postgres o user postgres-r00t-us3rn4m3:postgres-r00t-p4ssw0rd
+
+Para el RCE VISITAR TANTO:
+
+https://book.hacktricks.xyz/pentesting-web/sql-injection/postgresql-injection/rce-with-postgresql-extensions
+
+https://github.com/squid22/PostgreSQL_RCE/blob/main/postgresql_rce.py
